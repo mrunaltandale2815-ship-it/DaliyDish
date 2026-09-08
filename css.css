@@ -1,0 +1,1281 @@
+
+/* =========================================
+   DAILYDISH - MAIN STYLESHEET
+   ========================================= */
+
+/* ---------- GLOBAL ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:sans-serif;
+    background-color: #fffaf5;
+    color: #2f2f2f;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+.navbar {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 3px 18px rgba(0, 0, 0, 0.08);
+    padding: 12px 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #4a2c20;
+    white-space: nowrap;
+}
+
+.navbar-brand img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.navbar .nav {
+    gap: 8px;
+}
+
+.navbar .nav-link {
+    color: #555;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #b65c35;
+}
+
+.navbar .nav-link::after {
+    background-color: #b65c35;
+}
+
+.navbar .btn {
+    border: 1px solid #b65c35;
+    border-radius: 25px;
+    padding: 7px 18px;
+    margin-left: 5px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.navbar .btn a {
+    color: #b65c35;
+    font-weight: 500;
+}
+
+.navbar .btn:hover {
+    background-color: #b65c35;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(182, 92, 53, 0.2);
+}
+
+.navbar .btn:hover a {
+    color: white;
+}
+
+
+/* =========================================
+   WELCOME SECTION
+   ========================================= */
+
+.container-fluid {
+    padding: 0;
+}
+
+.welcome {
+    max-width: 900px;
+    margin: 125px auto 35px;
+    padding: 0 20px;
+}
+
+.welcome h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: #4a2c20;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.welcome p {
+    max-width: 850px;
+    margin: auto;
+    color: #666 !important;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   CAROUSEL
+   ========================================= */
+
+.carousel {
+    width: 100%;
+    position: relative;
+}
+
+.carousel-item {
+    height: 520px;
+    position: relative;
+}
+
+.carousel-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.62),
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.1)
+    );
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    z-index: 2;
+    text-align: left;
+    left: 9%;
+    right: auto;
+    bottom: 50%;
+    transform: translateY(50%);
+    max-width: 650px;
+}
+
+.carousel-caption h1 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 15px;
+}
+
+.carousel-caption p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: #f5f5f5;
+}
+
+
+/* =========================================
+   SEARCH BOX
+   ========================================= */
+
+.search-box {
+    display: flex;
+    width: min(100%, 500px);
+    background-color: white;
+    border-radius: 35px;
+    padding: 5px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 12px 18px;
+    font-size: 0.95rem;
+    border-radius: 30px;
+    color: #333;
+}
+
+.search-box button {
+    border: none;
+    background-color: #b65c35;
+    color: white;
+    padding: 11px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-box button:hover {
+    background-color: #8f4325;
+    transform: scale(1.02);
+}
+
+
+/* =========================================
+   CAROUSEL BUTTON
+   ========================================= */
+
+.carousel-btn {
+    border: none;
+    background-color: #b65c35;
+    border-radius: 28px;
+    padding: 12px 25px;
+    transition: all 0.3s ease;
+}
+
+.carousel-btn a {
+    color: white;
+    font-weight: 600;
+}
+
+.carousel-btn:hover {
+    background-color: #8f4325;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   CONTENT / FEATURES SECTION
+   ========================================= */
+
+.content {
+    padding: 65px 7%;
+    background-color: #f7eee7;
+}
+
+.content .row {
+    margin: 0;
+}
+
+.content hr {
+    border: 0;
+    height: 1px;
+    background-color: #d7c2b5;
+    opacity: 0.8;
+}
+
+.content .col-md-4 {
+    padding: 25px 35px;
+    position: relative;
+}
+
+.content .col-md-4:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background-color: #d7c2b5;
+}
+
+.content h1 {
+    color: #4a2c20;
+    font-size: 1.45rem;
+    font-weight: 650;
+    margin-bottom: 12px;
+}
+
+.content p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 0.94rem;
+}
+
+
+/* =========================================
+   TRENDING RECIPES
+   ========================================= */
+
+.cards {
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
+.cards > h1 {
+    color: #4a2c20;
+    font-size: 2.1rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 40px !important;
+}
+
+.cards > h1::after {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 4px;
+    left: 0;
+    bottom: -10px;
+    border-radius: 5px;
+    background-color: #b65c35;
+}
+
+.cards .row {
+    row-gap: 25px;
+}
+
+.cards .col-md-3 {
+    display: flex;
+}
+
+.card {
+    width: 100%;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.35s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.14);
+}
+
+.card-img-top {
+    height: 210px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.04);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    color: #4a2c20;
+    font-size: 1.15rem;
+    font-weight: 650;
+    margin-top: 0 !important;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    color: #6b6b6b;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    min-height: 68px;
+    margin-bottom: 15px;
+}
+
+.card .badge {
+    border-radius: 20px;
+    padding: 7px 10px;
+    font-size: 0.72rem;
+    font-weight: 500;
+    margin: 2px;
+}
+
+
+
+/* ================================
+   DAILYDISH FOOTER
+================================ */
+
+.dailydish-footer {
+    background: #3d2921;
+    color: #ffffff;
+    padding: 65px 20px 20px;
+    margin-top: 70px;
+}
+
+/* Brand */
+
+.footer-brand a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.footer-brand img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.footer-brand p {
+    max-width: 330px;
+    margin: 18px 0;
+    color: #d8cbc5;
+    font-size: 0.84rem;
+    line-height: 1.8;
+}
+
+/* Social Icons */
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social a {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #806d64;
+    border-radius: 50%;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.footer-social a:hover {
+    background: #b45f3c;
+    border-color: #b45f3c;
+    transform: translateY(-3px);
+}
+
+/* Footer Headings */
+
+.dailydish-footer h5 {
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 650;
+    margin-bottom: 20px;
+}
+
+/* Footer Links */
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 11px;
+}
+
+.footer-links a {
+    color: #cfc1ba;
+    text-decoration: none;
+    font-size: 0.82rem;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    padding-left: 4px;
+}
+
+/* Contact */
+
+.footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+
+    color: #cfc1ba;
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+.footer-contact i {
+    color: #d9825c;
+    margin-top: 3px;
+}
+
+/* Bottom */
+
+.footer-bottom {
+    margin-top: 45px;
+    padding-top: 20px;
+
+    border-top: 1px solid #5a443b;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #bcaea8;
+    font-size: 0.75rem;
+}
+
+.footer-bottom strong {
+    color: #ffffff;
+}
+
+.footer-bottom div {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-bottom a {
+    color: #bcaea8;
+    text-decoration: none;
+    font-size: 0.75rem;
+    transition: 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #ffffff;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 767px) {
+
+    .dailydish-footer {
+        padding: 50px 20px 20px;
+        margin-top: 50px;
+    }
+
+    .footer-brand p {
+        font-size: 0.8rem;
+    }
+
+    .dailydish-footer h5 {
+        margin-bottom: 14px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .footer-bottom div {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .footer-bottom div {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer-social a {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 991px) {
+
+    .navbar .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar-brand {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+
+    .navbar .nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .welcome {
+        margin-top: 160px;
+    }
+
+    .carousel-item {
+        height: 450px;
+    }
+
+    .carousel-caption {
+        left: 7%;
+        max-width: 570px;
+    }
+
+    .carousel-caption h1 {
+        font-size: 2.4rem;
+    }
+
+    .content {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .content .col-md-4 {
+        padding: 20px;
+    }
+
+    .cards {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 767px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    /* Navbar */
+
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .navbar .container {
+        gap: 8px;
+    }
+
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+
+    .navbar-brand img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .navbar .nav {
+        gap: 0;
+    }
+
+    .navbar .nav-link {
+        font-size: 0.8rem;
+        padding: 6px 7px;
+    }
+
+    .navbar .nav:last-child {
+        width: 100%;
+    }
+
+    .navbar .btn {
+        padding: 5px 14px;
+        font-size: 0.8rem;
+    }
+
+
+    /* Welcome */
+
+    .welcome {
+        margin-top: 180px;
+        margin-bottom: 25px;
+        padding: 0 18px;
+    }
+
+    .welcome h1 {
+        font-size: 2rem;
+    }
+
+    .welcome p {
+        font-size: 0.88rem;
+        line-height: 1.65;
+    }
+
+
+    /* Carousel */
+
+    .carousel-item {
+        height: 400px;
+    }
+
+    .carousel-caption {
+        left: 8%;
+        right: 8%;
+        bottom: 50%;
+        max-width: none;
+    }
+
+    .carousel-caption h1 {
+        font-size: 1.8rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+
+    .carousel-caption.d-none {
+        display: block !important;
+    }
+
+
+    /* Search */
+
+    .search-box {
+        width: 100%;
+    }
+
+    .search-box input {
+        min-width: 0;
+        padding: 10px 13px;
+        font-size: 0.8rem;
+    }
+
+    .search-box button {
+        padding: 9px 17px;
+        font-size: 0.8rem;
+    }
+
+
+    /* Feature section */
+
+    .content {
+        padding: 40px 20px;
+    }
+
+    .content .col-md-4 {
+        padding: 22px 10px;
+    }
+
+    .content .col-md-4:not(:last-child)::after {
+        display: none;
+    }
+
+    .content h1 {
+        font-size: 1.3rem;
+    }
+
+    .content p {
+        font-size: 0.87rem;
+    }
+
+
+    /* Trending */
+
+    .cards {
+        padding: 45px 20px 20px;
+    }
+
+    .cards > h1 {
+        font-size: 1.8rem;
+        margin-bottom: 30px !important;
+    }
+
+    .cards .col-md-3 {
+        width: 100%;
+    }
+
+    .card-img-top {
+        height: 220px;
+    }
+
+    .card-body {
+        padding: 18px;
+    }
+
+    .card-text {
+        min-height: auto;
+    }
+
+
+    /* Footer */
+
+    footer {
+        margin-top: 40px !important;
+    }
+
+    footer p {
+        font-size: 0.78rem;
+        padding: 0 15px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 400px) {
+
+    .navbar .nav-link {
+        font-size: 0.73rem;
+        padding: 5px;
+    }
+
+    .navbar .btn {
+        padding: 4px 10px;
+        font-size: 0.73rem;
+    }
+
+    .welcome {
+        margin-top: 175px;
+    }
+
+    .welcome h1 {
+        font-size: 1.75rem;
+    }
+
+    .carousel-item {
+        height: 360px;
+    }
+
+    .carousel-caption h1 {
+        font-size: 1.55rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.8rem;
+    }
+
+    .search-box button {
+        padding: 8px 13px;
+    }
+
+    .cards > h1 {
+        font-size: 1.6rem;
+    }
+}
+
+/* =====================================================
+   RECIPE CARD
+   ===================================================== */
+
+.recipe-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* =====================================================
+   RECIPE MODAL
+   ===================================================== */
+
+.recipe-modal {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fffaf5;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Modal Header */
+
+.recipe-modal .modal-header {
+    border-bottom: 1px solid #eee0d8;
+    padding: 20px 25px;
+    background: white;
+}
+
+.recipe-modal .modal-title {
+    color: #4b2e22;
+    font-weight: 700;
+}
+
+
+/* Modal Body */
+
+.recipe-modal .modal-body {
+    padding: 25px;
+}
+
+
+/* Recipe Image */
+
+.recipe-modal-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Recipe Title */
+
+#modalRecipeTitle {
+    color: #4b2e22;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+
+/* Description */
+
+.recipe-description {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+
+/* Recipe Info */
+
+.recipe-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.recipe-info span {
+    background: #f5e6de;
+    color: #4b2e22;
+    padding: 8px 13px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.recipe-info i {
+    color: #b45f3c;
+    margin-right: 5px;
+}
+
+
+/* Ingredients */
+
+.ingredients-title {
+    color: #4b2e22;
+    font-weight: 650;
+    margin-bottom: 8px;
+}
+
+#modalRecipeIngredients {
+    color: #666;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+
+/* Modal Footer */
+
+.recipe-modal .modal-footer {
+    border-top: 1px solid #eee0d8;
+    padding: 18px 25px;
+    background: white;
+}
+
+
+/* Close Button */
+
+.modal-close-btn {
+    border: 1px solid #b45f3c;
+    color: #b45f3c;
+    border-radius: 20px;
+    padding: 8px 18px;
+}
+
+.modal-close-btn:hover {
+    background: #b45f3c;
+    color: white;
+}
+
+
+/* Explore Button */
+
+.explore-btn {
+    background: #b45f3c;
+    color: white;
+    border-radius: 20px;
+    padding: 8px 18px;
+    border: none;
+}
+
+.explore-btn:hover {
+    background: #8f4328;
+    color: white;
+}
+
+
+/* =====================================================
+   MODAL RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 767px) {
+
+    .recipe-modal .modal-body {
+        padding: 20px;
+    }
+
+    .recipe-modal-img {
+        height: 220px;
+    }
+
+    #modalRecipeTitle {
+        font-size: 1.5rem;
+    }
+
+    .recipe-description {
+        font-size: 0.84rem;
+    }
+
+    .recipe-info {
+        gap: 8px;
+    }
+
+    .recipe-info span {
+        font-size: 0.72rem;
+        padding: 7px 10px;
+    }
+
+    .recipe-modal .modal-footer {
+        padding: 15px;
+    }
+
+    .modal-close-btn,
+    .explore-btn {
+        font-size: 0.8rem;
+        padding: 7px 14px;
+    }
+}
+
+/* =====================================
+   ABOUT DAILYDISH
+===================================== */
+
+.about-dailydish {
+    padding: 80px 20px;
+    margin-top: 70px;
+    background: #f5e6de;
+}
+
+
+/* Image */
+
+.about-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.04);
+}
+
+
+/* Content */
+
+.about-label {
+    color: #b45f3c;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.about-dailydish h1 {
+    color: #4b2e22;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 12px 0 20px;
+}
+
+.about-text {
+    color: #6d625d;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+
+/* Features */
+
+.about-features {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.about-feature {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.about-feature > i {
+    min-width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+    color: #b45f3c;
+}
+
+.about-feature h5 {
+    margin: 0 0 3px;
+    color: #4b2e22;
+    font-size: 0.9rem;
+    font-weight: 650;
+}
+
+.about-feature p {
+    margin: 0;
+    color: #777;
+    font-size: 0.78rem;
+}
+
+
+/* Button */
+
+.about-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 28px;
+
+    padding: 11px 20px;
+
+    background: #b45f3c;
+    color: #ffffff;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-size: 0.82rem;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.about-btn:hover {
+    background: #8f4328;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.about-btn i {
+    font-size: 0.7rem;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 991px) {
+
+    .about-dailydish {
+        padding: 65px 20px;
+    }
+
+    .about-image img {
+        height: 350px;
+    }
+
+    .about-dailydish h1 {
+        font-size: 2.2rem;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .about-dailydish {
+        padding: 50px 20px;
+        margin-top: 50px;
+    }
+
+    .about-image img {
+        height: 280px;
+    }
+
+    .about-dailydish h1 {
+        font-size: 1.9rem;
+    }
+
+    .about-text {
+        font-size: 0.85rem;
+    }
+
+    .about-btn {
+        margin-top: 22px;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .about-dailydish h1 {
+        font-size: 1.7rem;
+    }
+
+    .about-image img {
+        height: 230px;
+    }
+
+}

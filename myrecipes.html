@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Recipes | DailyDish</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+      <script src="https://kit.fontawesome.com/c592cfa614.js" crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/my-recipes.css">
+    <link rel="stylesheet" href="css/css.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <!-- ================= NAVBAR ================= -->
+<nav class="navbar toggler fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/a0d3d2cf-4fe7-48db-a4ad-0cd34e5e498a.png" alt="Logo" class="d-inline-block align-text-middle">DailyDish</a>
+      <ul class="nav justify-content-center nav-underline">
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="recipes.html">Recipes</a>
+        </li>  
+        <li class="nav-item">
+            <a class="nav-link active" href="myrecipes.html">My Recipes</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="share.html">Share</a>
+        </li>
+    </ul>
+    <ul class="nav justify-content-center nav-underline">
+        <button class="btn" type="submit"><a href="login.html">Login</a></button>      
+        <button class="btn" type="submit"><a href="signup.html">Signup</a></button>
+    </ul>
+  </div>  
+</nav>
+    <!-- ================= PAGE HEADER ================= -->
+
+    <section class="my-recipes-header">
+
+        <div class="container">
+
+            <div class="header-content">
+
+                <div>
+                    <span class="small-heading">
+                        <i class="fa-solid fa-book-open"></i>
+                        YOUR COLLECTION
+                    </span>
+
+                    <h1>My Recipes</h1>
+
+                    <p>
+                        Keep all your favorite recipes in one place
+                        and easily manage your delicious creations.
+                    </p>
+                </div>
+
+                <div>
+
+                    <a href="share.html" class="add-recipe-btn">
+                        <i class="fa-solid fa-plus"></i>
+                        Add New Recipe
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= RECIPE CONTENT ================= -->
+
+    <section class="my-recipes-section">
+
+        <div class="container">
+
+            <!-- Top Row -->
+
+            <div class="recipes-top">
+
+                <div>
+                    <h2>My Recipe Collection</h2>
+                    <p>2 recipes saved in your collection</p>
+                </div>
+
+                <!-- Search -->
+
+                <div class="recipe-search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input type="text"
+                        id="recipeSearch"
+                        placeholder="Search your recipes...">
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= RECIPE GRID ================= -->
+
+            <div class="row g-4" id="myRecipesContainer">
+
+
+                <!-- RECIPE 1 -->
+
+                <div class="col-lg-3 col-md-6 recipe-item">
+
+                    <div class="my-recipe-card">
+
+                        <div class="recipe-image">
+
+                            <img
+                                src="https://www.saltandlavender.com/wp-content/uploads/2018/07/creamy-garlic-pasta-51.jpg"
+                                alt="Creamy Garlic Pasta">
+
+                            <span class="category-badge">
+                                Snacks
+                            </span>
+
+                        </div>
+
+                        <div class="recipe-content">
+
+                            <h3>Creamy Garlic Pasta</h3>
+
+                            <p class="recipe-description">
+                                Delicious creamy garlic pasta
+                                perfect for a quick dinner.
+                            </p>
+
+                            <div class="recipe-details">
+
+                                <span>
+                                    <i class="fa-regular fa-clock"></i>
+                                    20 mins
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    4.5
+                                </span>
+
+                            </div>
+
+                            <div class="card-buttons">
+
+                                <button class="view-btn"
+                                    onclick="viewRecipe('Creamy Garlic Pasta')">
+                                    View Recipe
+                                </button>
+
+                                <div class="action-buttons">
+
+                                    <button class="edit-btn"
+                                        title="Edit Recipe">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="delete-btn"
+                                        title="Delete Recipe"
+                                        onclick="deleteRecipe(this)">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+        
+      
+
+                <!-- RECIPE 2 -->
+
+                <div class="col-lg-3 col-md-6 recipe-item">
+
+                    <div class="my-recipe-card">
+
+                        <div class="recipe-image">
+
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDVci-zpy9-hyVJdBjjDhGxFP3_2DXNNjlkbvtusTiyxQjg9gaasr6SuY&s=10"
+                                alt="Grilled Paneer Sandwich">
+
+                            <span class="category-badge">
+                                Snacks
+                            </span>
+
+                        </div>
+
+                        <div class="recipe-content">
+
+                            <h3>Grilled Paneer Sandwich</h3>
+
+                            <p class="recipe-description">
+                                A delicious grilled sandwich
+                                filled with flavorful paneer.
+                            </p>
+
+                            <div class="recipe-details">
+
+                                <span>
+                                    <i class="fa-regular fa-clock"></i>
+                                    15 mins
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    4.2
+                                </span>
+
+                            </div>
+
+                            <div class="card-buttons">
+
+                                <button class="view-btn"
+                                    onclick="viewRecipe('Grilled Paneer Sandwich')">
+                                    View Recipe
+                                </button>
+
+                                <div class="action-buttons">
+
+                                    <button class="edit-btn">
+                                        <i class="fa-solid fa-pen"></i>
+                                    </button>
+
+                                    <button class="delete-btn"
+                                        onclick="deleteRecipe(this)">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= EMPTY MESSAGE ================= -->
+
+            <div id="noRecipes" class="no-recipes d-none">
+
+                <div class="empty-icon">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+
+                <h3>No Recipes Found</h3>
+
+                <p>
+                    You haven't added any recipes yet.
+                </p>
+
+                <a href="share.html" class="add-recipe-btn">
+                    <i class="fa-solid fa-plus"></i>
+                    Add Your First Recipe
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    
+<!-- ================= FOOTER ================= -->
+<footer class="dailydish-footer">
+    <div class="container">
+
+        <div class="row gy-4">
+
+            <!-- Brand -->
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-brand">
+                    <a href="index.html">
+                        <img src="images/a0d3d2cf-4fe7-48db-a4ad-0cd34e5e498a.png"
+                             alt="DailyDish Logo">
+                        <span>DailyDish</span>
+                    </a>
+
+                    <p>
+                        Discover delicious recipes, try new flavors,
+                        and share your favorite dishes with food lovers.
+                    </p>
+
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-2 col-md-6">
+                <h5>Quick Links</h5>
+
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="myrecipes.html">My Recipes</a></li>
+                    <li><a href="share.html">Share Recipe</a></li>
+                </ul>
+            </div>
+
+            <!-- Categories -->
+            <div class="col-lg-3 col-md-6">
+                <h5>Categories</h5>
+
+                <ul class="footer-links">
+                    <li><a href="recipes.html">Breakfast</a></li>
+                    <li><a href="recipes.html">Vegan</a></li>
+                    <li><a href="recipes.html">Non-Vegan</a></li>
+                    <li><a href="recipes.html">Desserts</a></li>
+                    <li><a href="recipes.html">Snacks</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-lg-3 col-md-6">
+                <h5>Get In Touch</h5>
+
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>hello@dailydish.com</span>
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Made with love for food lovers</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="footer-bottom">
+            <p>
+                © 2026 <strong>DailyDish</strong>. All rights reserved.
+            </p>
+
+            <div>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="js/myrecipes.js">
+
+      
+    </script>
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>

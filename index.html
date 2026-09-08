@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/css.css">   
+      <script src="https://kit.fontawesome.com/c592cfa614.js" crossorigin="anonymous"></script>
+    <title>DailyDish | Discover Delicious Recipes</title>
+</head>
+<body>
+
+  <nav class="navbar toggler fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/a0d3d2cf-4fe7-48db-a4ad-0cd34e5e498a.png" alt="Logo" class="d-inline-block align-text-middle">DailyDish</a>
+      <ul class="nav justify-content-center nav-underline">
+        <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="recipes.html">Recipes</a>
+        </li>  
+        <li class="nav-item">
+            <a class="nav-link" href="myrecipes.html">My Recipes</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="share.html">Share</a>
+        </li>
+    </ul>
+    <ul class="nav justify-content-center nav-underline">
+        <button class="btn" type="submit"><a href="login.html">Login</a></button>      
+        <button class="btn" type="submit"><a href="signup.html">Signup</a></button>
+    </ul>
+  </div>  
+</nav>
+
+  
+<section class="container-fluid">
+
+
+  <div class="row">
+    <div class="col-md-12 text-center mb-5">
+      <div class="welcome">
+      <h1>Welcome to DailyDish</h1>
+      <p class="text-dark">Discover a world of culinary delights with our extensive collection of recipes. From traditional favorites to innovative creations, DailyDish is your go-to source for all things food. Whether you're a seasoned chef or a home cook, our platform offers something for everyone. Explore, create, and share your culinary masterpieces with our vibrant community of food enthusiasts.</p>
+      </div>
+      </div>
+    </div>
+    
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+
+      <div class="carousel-inner">
+        
+        <div class="carousel-item active">
+          <img src="https://www.tastingtable.com/img/gallery/20-delicious-indian-dishes-you-have-to-try-at-least-once/l-intro-1733153567.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Discover Delicious Recipes</h1>
+            <p>Simple and delicious recipes for every occasion.</p>
+            <form class="search-box">
+              <input type="search" name="query" placeholder="Search recipes..." aria-label="Search learning materials">
+              <button type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+        
+        <div class="carousel-item">
+          <img src="https://instacuppastore.com/cdn/shop/articles/monsoon-comfort-food-cover.jpg?v=1779714798&width=1200" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Which Recipe Would You Like to Try Today?</h1>
+            <p>Find the perfect recipe for your next meal.</p>
+            <button class=" carousel-btn"><a href="recipes.html">Explore Recipes</a></button>      
+          </div>
+        </div>
+        
+        <div class="carousel-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4T84oPRWYNSB5YkNtKyV9p1TIixUK8rq39ZLEkIvg0_P9Z373DY1OyHdI&s=10" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Share Your Recipes</h1>
+            <p>Upload your favorite recipes and inspire others.</p>
+            <button class=" carousel-btn"><a href="share.html">Share Your Recipe</a></button>      
+        </div>
+
+        </div>
+      </div>
+    </div>
+
+</section>
+
+<section class="fluid text-center content">
+
+  <div class="row">
+    
+    <hr>
+
+    <div class="col-md-4 ">
+     <h1 class="mt-3">Easy to Follow</h1>
+      <p class="mb-3">with clear instructions and step-by-step guidance. Whether you're a beginner or an experienced cook, you'll find our recipes accessible and enjoyable.</p>
+    </div>
+    
+    <div class="col-md-4">
+      <h1 class="mt-3">Cooking Tips</h1>
+      <p class="mb-3">Learn valuable cooking techniques and tips from our expert chefs. From knife skills to flavor combinations, we've got you covered.</p>
+    </div>
+    
+    <div class="col-md-4">
+      <h1 class="mt-3">Explore Recipes</h1>
+      <p class="mb-3">Discover a wide variety of recipes from different cuisines and cooking styles. Find something new to try every day.</p>
+    </div>
+    
+    <hr>
+  
+  </div>
+</section>  
+
+<section class="container text-left cards">
+
+  <h1 class="mb-5">Trending Recipes</h1>  
+
+  <div class="row">
+    
+    <div class="col-md-3">
+      <div class="card recipe-card"
+          data-bs-toggle="modal"
+          data-bs-target="#recipeModal"
+          data-title="Creamy Garlic Pasta"
+          data-image="https://www.saltandlavender.com/wp-content/uploads/2018/07/creamy-garlic-pasta-51.jpg"
+          data-description="Delicious and creamy garlic pasta that's perfect for a quick lunch or dinner."
+          data-time="20 mins"
+          data-rating="4.5/5"
+          data-ingredients="Pasta, Garlic, Butter, Cream, Parmesan Cheese, Black Pepper, Salt">
+
+        <img src="https://www.saltandlavender.com/wp-content/uploads/2018/07/creamy-garlic-pasta-51.jpg"
+            class="card-img-top"
+            alt="Creamy Garlic Pasta">
+
+        <div class="card-body">
+          <h5 class="card-title mt-3">Creamy Garlic Pasta</h5>
+
+          <p class="card-text">
+            Delicious and creamy garlic pasta that's perfect for any occasion.
+          </p>
+
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-3">
+      <div class="card recipe-card"
+          data-bs-toggle="modal"
+          data-bs-target="#recipeModal"
+          data-title="Crispy Masala Dosa"
+          data-image="https://www.cookwithmanali.com/wp-content/uploads/2020/05/Masala-Dosa.jpg"
+          data-description="Crispy and flavorful masala dosa filled with a delicious spiced potato mixture, a popular South Indian breakfast."
+          data-time="30 mins"
+          data-rating="4.8/5"
+          data-ingredients="Rice, Urad Dal, Potato, Onion, Green Chilli, Mustard Seeds, Curry Leaves, Turmeric, Salt">
+
+        <img src="https://www.cookwithmanali.com/wp-content/uploads/2020/05/Masala-Dosa.jpg"
+            class="card-img-top"
+            alt="Crispy Masala Dosa">
+
+        <div class="card-body">
+          <h5 class="card-title mt-3">Crispy Masala Dosa</h5>
+
+          <p class="card-text">
+            Crispy and flavorful masala dosa that's a popular South Indian dish.
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card recipe-card"
+        data-bs-toggle="modal"
+        data-bs-target="#recipeModal"
+        data-title="Chocolate Brownie"
+        data-image="https://bakewithshivesh.com/wp-content/uploads/2023/10/cooker-brownie-1.jpg"
+        data-description="Rich, fudgy and delicious chocolate brownies that are easy to prepare and perfect for satisfying your sweet cravings."
+        data-time="25 mins"
+        data-rating="4.5/5"
+        data-ingredients="All-Purpose Flour, Cocoa Powder, Sugar, Butter, Chocolate, Eggs, Vanilla Extract, Baking Powder, Salt">
+
+      <img src="https://bakewithshivesh.com/wp-content/uploads/2023/10/cooker-brownie-1.jpg"
+          class="card-img-top"
+          alt="Chocolate Brownie">
+
+      <div class="card-body">
+        <h5 class="card-title mt-3">Chocolate Brownie</h5>
+
+        <p class="card-text">
+          Rich and fudgy chocolate brownies that are perfect for dessert.
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="card recipe-card"
+        data-bs-toggle="modal"
+        data-bs-target="#recipeModal"
+        data-title="Grilled Paneer Sandwich"
+        data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDVci-zpy9-hyVJdBjjDhGxFP3_2DXNNjlkbvtusTiyxQjg9gaasr6SuY&s=10"
+        data-description="A delicious and healthy grilled paneer sandwich packed with flavorful paneer, vegetables and spices, perfect for a quick meal."
+        data-time="15 mins"
+        data-rating="4.2/5"
+        data-ingredients="Bread, Paneer, Onion, Tomato, Capsicum, Cheese, Green Chilli, Black Pepper, Butter, Salt">
+
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDVci-zpy9-hyVJdBjjDhGxFP3_2DXNNjlkbvtusTiyxQjg9gaasr6SuY&s=10"
+          class="card-img-top"
+          alt="Grilled Paneer Sandwich">
+
+      <div class="card-body">
+        <h5 class="card-title mt-3">Grilled Paneer Sandwich</h5>
+
+        <p class="card-text">
+          Delicious and healthy grilled paneer sandwich for a quick meal.
+        </p>
+
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT DAILYDISH ================= -->
+
+<section class="about-dailydish">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <!-- About Image -->
+            <div class="col-lg-5">
+                <div class="about-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=80"
+                        alt="Cooking food">
+                </div>
+            </div>
+
+            <!-- About Content -->
+            <div class="col-lg-7">
+                <span class="about-label">
+                    ABOUT DAILYDISH
+                </span>
+                <h1>
+                    Good Food Brings
+                    People Together
+                </h1>
+
+                <p class="about-text">
+                    DailyDish is a place for food lovers to discover,
+                    create and share delicious recipes. From quick
+                    everyday meals to special dishes, we make it easy
+                    to find something you'll love to cook.
+                </p>
+
+                <p class="about-text">
+                    Whether you are a beginner learning your first
+                    recipe or an experienced home cook, DailyDish
+                    helps you explore new flavors, discover useful
+                    cooking tips and share your own creations with
+                    others.
+                </p>
+
+                <!-- About Features -->
+                <div class="about-features">
+
+                    <div class="about-feature">
+                        <i class="fa-solid fa-book-open"></i>
+                        <div>
+                            <h5>Discover Recipes</h5>
+                            <p>
+                                Explore recipes for every occasion.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="about-feature">
+                        <i class="fa-solid fa-utensils"></i>
+                        <div>
+                            <h5>Cook With Confidence</h5>
+                            <p>
+                                Follow simple and clear instructions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="about-feature">
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <div>
+                            <h5>Share Your Recipes</h5>
+                            <p>
+                                Inspire others with your favorite dishes.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <a href="recipes.html" class="about-btn">
+                    Explore Recipes
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="dailydish-footer">
+    <div class="container">
+
+        <div class="row gy-4">
+
+            <!-- Brand -->
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-brand">
+                    <a href="index.html">
+                        <img src="images/a0d3d2cf-4fe7-48db-a4ad-0cd34e5e498a.png"
+                             alt="DailyDish Logo">
+                        <span>DailyDish</span>
+                    </a>
+
+                    <p>
+                        Discover delicious recipes, try new flavors,
+                        and share your favorite dishes with food lovers.
+                    </p>
+
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-2 col-md-6">
+                <h5>Quick Links</h5>
+
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="myrecipes.html">My Recipes</a></li>
+                    <li><a href="share.html">Share Recipe</a></li>
+                </ul>
+            </div>
+
+            <!-- Categories -->
+            <div class="col-lg-3 col-md-6">
+                <h5>Categories</h5>
+
+                <ul class="footer-links">
+                    <li><a href="recipes.html">Breakfast</a></li>
+                    <li><a href="recipes.html">Vegan</a></li>
+                    <li><a href="recipes.html">Non-Vegan</a></li>
+                    <li><a href="recipes.html">Desserts</a></li>
+                    <li><a href="recipes.html">Snacks</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-lg-3 col-md-6">
+                <h5>Get In Touch</h5>
+
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>hello@dailydish.com</span>
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Made with love for food lovers</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="footer-bottom">
+            <p>
+                © 2026 <strong>DailyDish</strong>. All rights reserved.
+            </p>
+
+            <div>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+<!-- ================= RECIPE MODAL ================= -->
+
+<div class="modal fade" id="recipeModal" tabindex="-1" aria-labelledby="recipeModalLabel" aria-hidden="true">
+
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+
+    <div class="modal-content recipe-modal">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h1 class="modal-title fs-4" id="recipeModalLabel">
+          Recipe Details
+        </h1>
+
+        <button type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close">
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+
+        <div class="row g-4 align-items-center">
+
+          <!-- Recipe Image -->
+          <div class="col-md-5">
+
+            <img id="modalRecipeImage"
+                 src=""
+                 alt="Recipe Image"
+                 class="img-fluid recipe-modal-img">
+
+          </div>
+
+          <!-- Recipe Information -->
+          <div class="col-md-7">
+
+            <h2 id="modalRecipeTitle">
+              Recipe Name
+            </h2>
+
+            <p id="modalRecipeDescription" class="recipe-description">
+              Recipe description
+            </p>
+
+            <!-- Recipe Information -->
+            <div class="recipe-info">
+
+              <span>
+                <i class="fa-regular fa-clock"></i>
+                <strong>Time:</strong>
+                <span id="modalRecipeTime"></span>
+              </span>
+
+              <span>
+                <i class="fa-solid fa-star"></i>
+                <strong>Rating:</strong>
+                <span id="modalRecipeRating"></span>
+              </span>
+
+            </div>
+
+            <!-- Ingredients -->
+            <h5 class="ingredients-title">
+              Ingredients
+            </h5>
+
+            <p id="modalRecipeIngredients">
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="modal-footer">
+
+        <button type="button"
+                class="btn modal-close-btn"
+                data-bs-dismiss="modal">
+          Close
+        </button>
+
+        <a href="recipes.html"
+           class="btn explore-btn">
+          View Recipe
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="js/index.js"></script>
+  </body>
+</html>

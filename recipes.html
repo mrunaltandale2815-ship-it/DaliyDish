@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/recipes.css">   
+    <link rel="stylesheet" href="css/css.css">
+      <script src="https://kit.fontawesome.com/c592cfa614.js" crossorigin="anonymous"></script>
+
+    <title>DailyDish | Discover Recipes</title>
+</head>
+<body>
+    <nav class="navbar toggler fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/a0d3d2cf-4fe7-48db-a4ad-0cd34e5e498a.png" alt="Logo" class="d-inline-block align-text-middle">DailyDish</a>
+      <ul class="nav justify-content-center nav-underline">
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="recipes.html">Recipes</a>
+        </li>  
+        <li class="nav-item">
+            <a class="nav-link" href="myrecipes.html">My Recipes</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="share.html">Share</a>
+        </li>
+    </ul>
+    <ul class="nav justify-content-center nav-underline">
+        <button class="btn" type="submit"><a href="login.html">Login</a></button>      
+        <button class="btn" type="submit"><a href="signup.html">Signup</a></button>
+    </ul>
+  </div>  
+</nav>
+
+<section class="container category">
+      
+<div id="carouselExampleCaptions" class="carousel slide ">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 3"></button>
+
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 3"></button>
+
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 3"></button>
+
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/breakfast.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h1>BreakFast Dishes</h1>
+                <form class="search-box">
+          <input type="search" name="query" placeholder="Search recipes..." aria-label="Search learning materials">
+          <button type="submit">Search</button>
+        </form>
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/veg.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h1>vegan Dishes</h1>
+        <form class="search-box">
+          <input type="search" name="query" placeholder="Search recipes..." aria-label="Search learning materials">
+          <button type="submit">Search</button>
+        </form>
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/non-veg.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h1>Non-Vegan Dishes</h1>
+        <form class="search-box">
+          <input type="search" name="query" placeholder="Search recipes..." aria-label="Search learning materials">
+          <button type="submit">Search</button>
+        </form>
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/desserts.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h1>Desserts</h1>
+        <form class="search-box">
+          <input type="search" name="query" placeholder="Search recipes..." aria-label="Search learning materials">
+          <button type="submit">Search</button>
+        </form>
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/snacks.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h1>Snacks</h1>
+        <form class="search-box">
+          <input type="search" name="query" placeholder="Search recipes..." aria-label="Search learning materials">
+          <button type="submit">Search</button>
+        </form>
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="images/beverage.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h1>Beverage</h1>
+        <form class="search-box">
+          <input type="search" name="query" placeholder="Search recipes..." aria-label="Search learning materials">
+          <button type="submit">Search</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+</section>
+<section class="container-fluid">
+    <div class="row">
+    <div class="col-md-12 text-center mb-5">
+      <div class="welcome">
+        <h1>Which is your today's special dish?</h1>
+    </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search for recipes...">
+            <button type="submit">Search</button>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<!-- ============================= -->
+<!-- RECIPE CARDS -->
+<!-- ============================= -->
+
+<section class="container my-5">
+
+    <div class="row flex-nowrap overflow-auto g-4 pb-3">
+
+        <!-- Card 1 -->
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+
+            <div class="card h-100 shadow-sm border-0">
+
+                <img src="https://madhurasrecipe.com/wp-content/uploads/2023/07/Kande-Pohe-Featured.jpg"
+                     class="card-img-top"
+                     style="height:200px; object-fit:cover;"
+                     alt="Poha">
+
+                <div class="card-body d-flex flex-column">
+
+                    <h5 class="card-title">
+                        Classic Vegetable Poha
+                    </h5>
+
+                    <p class="card-text text-muted">
+                        Light and flavorful poha made with flattened rice,
+                        vegetables and aromatic spices.
+                    </p>
+
+                    <button class="btn mt-auto"
+                            style="background:#b45f3c; color:white;"
+                            onclick="openRecipe(
+                                'Classic Vegetable Poha',
+                                'https://madhurasrecipe.com/wp-content/uploads/2023/07/Kande-Pohe-Featured.jpg',
+                                'Breakfast',
+                                '20 mins',
+                                '4.6',
+                                'Light and flavorful poha made with flattened rice, vegetables and aromatic spices.'
+                            )">
+                        <i class="fa-solid fa-utensils me-2"></i>
+                        View Recipe
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Card 2 -->
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+
+            <div class="card h-100 shadow-sm border-0">
+
+                <img src="https://vegecravings.com/wp-content/uploads/2017/04/paneer-butter-masala-recipe-step-by-step-instructions.jpg"
+                     class="card-img-top"
+                     style="height:200px; object-fit:cover;"
+                     alt="Paneer Butter Masala">
+
+                <div class="card-body d-flex flex-column">
+
+                    <h5 class="card-title">
+                        Paneer Butter Masala
+                    </h5>
+
+                    <p class="card-text text-muted">
+                        Soft paneer cooked in a rich, creamy tomato gravy
+                        with aromatic Indian spices.
+                    </p>
+
+                    <button class="btn mt-auto"
+                            style="background:#b45f3c; color:white;"
+                            onclick="openRecipe(
+                                'Paneer Butter Masala',
+                                'https://vegecravings.com/wp-content/uploads/2017/04/paneer-butter-masala-recipe-step-by-step-instructions.jpg',
+                                'Main Course',
+                                '35 mins',
+                                '4.9',
+                                'Soft paneer cooked in a rich, creamy tomato gravy with aromatic Indian spices.'
+                            )">
+                        <i class="fa-solid fa-utensils me-2"></i>
+                        View Recipe
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Card 3 -->
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+
+            <div class="card h-100 shadow-sm border-0">
+
+                <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/07/Chicken-Biryani-Recipe.jpg"
+                     class="card-img-top"
+                     style="height:200px; object-fit:cover;"
+                     alt="Chicken Biryani">
+
+                <div class="card-body d-flex flex-column">
+
+                    <h5 class="card-title">
+                        Chicken Biryani
+                    </h5>
+
+                    <p class="card-text text-muted">
+                        Fragrant basmati rice layered with spicy chicken,
+                        herbs and flavorful biryani spices.
+                    </p>
+
+                    <button class="btn mt-auto"
+                            style="background:#b45f3c; color:white;"
+                            onclick="openRecipe(
+                                'Chicken Biryani',
+                                'https://www.cubesnjuliennes.com/wp-content/uploads/2020/07/Chicken-Biryani-Recipe.jpg',
+                                'Non-Veg',
+                                '55 mins',
+                                '4.8',
+                                'Fragrant basmati rice layered with spicy chicken, herbs and flavorful biryani spices.'
+                            )">
+                        <i class="fa-solid fa-utensils me-2"></i>
+                        View Recipe
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Card 4 -->
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+
+            <div class="card h-100 shadow-sm border-0">
+
+                <img src="https://www.foodie-trail.com/wp-content/uploads/2020/04/PHOTO-2022-02-12-20-04-41_1.jpg"
+                     class="card-img-top"
+                     style="height:200px; object-fit:cover;"
+                     alt="Gulab Jamun">
+
+                <div class="card-body d-flex flex-column">
+
+                    <h5 class="card-title">
+                        Gulab Jamun
+                    </h5>
+
+                    <p class="card-text text-muted">
+                        Soft and juicy milk-solid dumplings soaked in
+                        delicious cardamom-flavored sugar syrup.
+                    </p>
+
+                    <button class="btn mt-auto"
+                            style="background:#b45f3c; color:white;"
+                            onclick="openRecipe(
+                                'Gulab Jamun',
+                                'https://www.foodie-trail.com/wp-content/uploads/2020/04/PHOTO-2022-02-12-20-04-41_1.jpg',
+                                'Dessert',
+                                '40 mins',
+                                '4.7',
+                                'Soft and juicy milk-solid dumplings soaked in delicious cardamom-flavored sugar syrup.'
+                            )">
+                        <i class="fa-solid fa-utensils me-2"></i>
+                        View Recipe
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Card 5 -->
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+
+            <div class="card h-100 shadow-sm border-0">
+
+                <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/veg-manchurian.jpg"
+                     class="card-img-top"
+                     style="height:200px; object-fit:cover;"
+                     alt="Veg Manchurian">
+
+                <div class="card-body d-flex flex-column">
+
+                    <h5 class="card-title">
+                        Veg Manchurian
+                    </h5>
+
+                    <p class="card-text text-muted">
+                        Crispy vegetable balls tossed in a spicy,
+                        tangy and flavorful Indo-Chinese sauce.
+                    </p>
+
+                    <button class="btn mt-auto"
+                            style="background:#b45f3c; color:white;"
+                            onclick="openRecipe(
+                                'Veg Manchurian',
+                                'https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/veg-manchurian.jpg',
+                                'Snacks',
+                                '30 mins',
+                                '4.5',
+                                'Crispy vegetable balls tossed in a spicy, tangy and flavorful Indo-Chinese sauce.'
+                            )">
+                        <i class="fa-solid fa-utensils me-2"></i>
+                        View Recipe
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Card 6 -->
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+
+            <div class="card h-100 shadow-sm border-0">
+
+                <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/04/mango-lassi-recipe.jpg"
+                     class="card-img-top"
+                     style="height:200px; object-fit:cover;"
+                     alt="Mango Lassi">
+
+                <div class="card-body d-flex flex-column">
+
+                    <h5 class="card-title">
+                        Refreshing Mango Lassi
+                    </h5>
+
+                    <p class="card-text text-muted">
+                        A creamy and refreshing yogurt-based mango drink
+                        that's perfect for a hot summer day.
+                    </p>
+
+                    <button class="btn mt-auto"
+                            style="background:#b45f3c; color:white;"
+                            onclick="openRecipe(
+                                'Refreshing Mango Lassi',
+                                'https://www.indianhealthyrecipes.com/wp-content/uploads/2022/04/mango-lassi-recipe.jpg',
+                                'Beverage',
+                                '10 mins',
+                                '4.8',
+                                'A creamy and refreshing yogurt-based mango drink that is perfect for a hot summer day.'
+                            )">
+                        <i class="fa-solid fa-utensils me-2"></i>
+                        View Recipe
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Card 7 -->
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+
+            <div class="card h-100 shadow-sm border-0">
+
+                <img src="https://theveganatlas.com/wp-content/uploads/2019/09/Chickpea-Curry-Chana-Masala1.jpg"
+                     class="card-img-top"
+                     style="height:200px; object-fit:cover;"
+                     alt="Chana Masala">
+
+                <div class="card-body d-flex flex-column">
+
+                    <h5 class="card-title">
+                        Spicy Chana Masala
+                    </h5>
+
+                    <p class="card-text text-muted">
+                        A hearty chickpea curry cooked with tomatoes,
+                        onions and aromatic Indian spices.
+                    </p>
+
+                    <button class="btn mt-auto"
+                            style="background:#b45f3c; color:white;"
+                            onclick="openRecipe(
+                                'Spicy Chana Masala',
+                                'https://theveganatlas.com/wp-content/uploads/2019/09/Chickpea-Curry-Chana-Masala1.jpg',
+                                'Vegan',
+                                '35 mins',
+                                '4.7',
+                                'A hearty chickpea curry cooked with tomatoes, onions and aromatic Indian spices.'
+                            )">
+                        <i class="fa-solid fa-utensils me-2"></i>
+                        View Recipe
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- Card 8 -->
+        <div class="col-10 col-sm-6 col-md-4 col-lg-3">
+
+            <div class="card h-100 shadow-sm border-0">
+
+                <img src="https://www.finedininglovers.com/sites/default/files/2026-02/vegetable-samosa.jpg"
+                     class="card-img-top"
+                     style="height:200px; object-fit:cover;"
+                     alt="Vegetable Samosa">
+
+                <div class="card-body d-flex flex-column">
+
+                    <h5 class="card-title">
+                        Crispy Vegetable Samosa
+                    </h5>
+
+                    <p class="card-text text-muted">
+                        Golden and crispy pastry filled with spiced potatoes,
+                        peas and aromatic herbs.
+                    </p>
+
+                    <button class="btn mt-auto"
+                            style="background:#b45f3c; color:white;"
+                            onclick="openRecipe(
+                                'Crispy Vegetable Samosa',
+                                'https://www.finedininglovers.com/sites/default/files/2026-02/vegetable-samosa.jpg',
+                                'Snacks',
+                                '45 mins',
+                                '4.6',
+                                'Golden and crispy pastry filled with spiced potatoes, peas and aromatic herbs.'
+                            )">
+                        <i class="fa-solid fa-utensils me-2"></i>
+                        View Recipe
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+<!-- ============================= -->
+<!-- FESTIVE DISHES SECTION -->
+<!-- ============================= -->
+
+<section class="festive-dishes">
+    <div class="container">
+
+        <div class="festive-heading text-center">
+            <span>FESTIVE SPECIAL</span>
+            <h2>Celebrate With Delicious Flavours</h2>
+            <p>
+                Make your celebrations extra special with these
+                traditional and festive dishes loved by everyone.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Festive Dish 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="festive-card">
+                    <img src="https://www.cadburydessertscorner.com/hubfs/dc-website-2022/articles/soft-gulab-jamun-recipe-for-raksha-bandhan-from-dough-to-syrup-all-you-need-to-know/soft-gulab-jamun-recipe-for-raksha-bandhan-from-dough-to-syrup-all-you-need-to-know.webp"
+                         alt="Gulab Jamun">
+
+                    <div class="festive-content">
+                        <span class="festive-tag">Sweet</span>
+                        <h4>Gulab Jamun</h4>
+                        <p>
+                            Soft and delicious milk-solid dumplings
+                            soaked in sweet sugar syrup.
+                        </p>
+
+                        <div class="festive-info">
+                            <span><i class="bi bi-clock"></i> 40 mins</span>
+                            <span><i class="bi bi-star-fill"></i> 4.8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Festive Dish 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="festive-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE654yAwa9ULgSMhz0E6oNANCpDP2lqmhtJ3DBuwdMLGqKGDKf3aqQT5Tq&s=10"
+                         alt="Paneer Tikka">
+
+                    <div class="festive-content">
+                        <span class="festive-tag">Starter</span>
+                        <h4>Paneer Tikka</h4>
+                        <p>
+                            Spiced paneer cubes grilled with colourful
+                            vegetables for a delicious festive starter.
+                        </p>
+
+                        <div class="festive-info">
+                            <span><i class="bi bi-clock"></i> 30 mins</span>
+                            <span><i class="bi bi-star-fill"></i> 4.7</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Festive Dish 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="festive-card">
+                    <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2019/04/veg-biryani-recipe.jpg"
+                         alt="Vegetable Biryani">
+
+                    <div class="festive-content">
+                        <span class="festive-tag">Main Course</span>
+                        <h4>Vegetable Biryani</h4>
+                        <p>
+                            Fragrant basmati rice cooked with vegetables,
+                            herbs and aromatic biryani spices.
+                        </p>
+
+                        <div class="festive-info">
+                            <span><i class="bi bi-clock"></i> 50 mins</span>
+                            <span><i class="bi bi-star-fill"></i> 4.8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Festive Dish 4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="festive-card">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2023/8/331330885/QS/SN/NJ/96478487/frozen-steamed-modak.jpg"
+                         alt="Modak">
+
+                    <div class="festive-content">
+                        <span class="festive-tag">Festive Sweet</span>
+                        <h4>Steamed Modak</h4>
+                        <p>
+                            Traditional sweet dumplings filled with coconut,
+                            jaggery and cardamom.
+                        </p>
+
+                        <div class="festive-info">
+                            <span><i class="bi bi-clock"></i> 45 mins</span>
+                            <span><i class="bi bi-star-fill"></i> 4.9</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Festive Dish 5 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="festive-card">
+                    <img src="https://www.spiceupthecurry.com/wp-content/uploads/2019/06/poori-bhaji-recipe-12.jpg"
+                         alt="Poori Bhaji">
+
+                    <div class="festive-content">
+                        <span class="festive-tag">Traditional</span>
+                        <h4>Poori Bhaji</h4>
+                        <p>
+                            Crispy golden pooris served with flavorful
+                            spiced potato bhaji.
+                        </p>
+
+                        <div class="festive-info">
+                            <span><i class="bi bi-clock"></i> 35 mins</span>
+                            <span><i class="bi bi-star-fill"></i> 4.6</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Festive Dish 6 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="festive-card">
+                    <img src="https://www.spiceupthecurry.com/wp-content/uploads/2021/10/kheer-recipe-2.jpg"
+                         alt="Rice Kheer">
+
+                    <div class="festive-content">
+                        <span class="festive-tag">Dessert</span>
+                        <h4>Traditional Rice Kheer</h4>
+                        <p>
+                            Creamy rice pudding prepared with milk,
+                            sugar, cardamom and dry fruits.
+                        </p>
+
+                        <div class="festive-info">
+                            <span><i class="bi bi-clock"></i> 35 mins</span>
+                            <span><i class="bi bi-star-fill"></i> 4.8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Recipe Modal -->
+<div class="modal fade" id="recipeModal" tabindex="-1"
+     aria-labelledby="recipeModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+
+        <div class="modal-content border-0 rounded-4 overflow-hidden">
+
+            <!-- Modal Header -->
+            <div class="modal-header border-0 position-absolute top-0 end-0"
+                 style="z-index: 10;">
+
+                <button type="button"
+                        class="btn-close bg-white p-2 rounded-circle shadow"
+                        data-bs-dismiss="modal"
+                        aria-label="Close">
+                </button>
+
+            </div>
+
+            <div class="row g-0">
+
+                <!-- Recipe Image -->
+                <div class="col-md-5">
+
+                    <img id="modalRecipeImage"
+                         src=""
+                         class="img-fluid w-100 h-100"
+                         style="min-height:400px; object-fit:cover;"
+                         alt="Recipe">
+
+                </div>
+
+                <!-- Recipe Details -->
+                <div class="col-md-7">
+
+                    <div class="p-4 p-md-5">
+
+                        <span id="modalRecipeCategory"
+                              class="badge rounded-pill mb-3"
+                              style="background:#f5e6de; color:#b45f3c;">
+                            Breakfast
+                        </span>
+
+                        <h2 id="modalRecipeTitle"
+                            class="fw-bold mb-3"
+                            style="color:#4b2e22;">
+                            Recipe Name
+                        </h2>
+
+                        <p id="modalRecipeDescription"
+                           class="text-muted">
+                            Recipe description.
+                        </p>
+
+                        <!-- Time & Rating -->
+                        <div class="d-flex gap-4 my-4">
+
+                            <div>
+                                <i class="fa-regular fa-clock me-2"
+                                   style="color:#b45f3c;"></i>
+
+                                <span id="modalRecipeTime">
+                                    20 mins
+                                </span>
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-star me-2"
+                                   style="color:#d49b32;"></i>
+
+                                <span id="modalRecipeRating">
+                                    4.6
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <hr>
+
+                        <h5 class="fw-semibold mt-4"
+                            style="color:#4b2e22;">
+                            About This Recipe
+                        </h5>
+
+                        <p class="text-muted">
+                            Discover this delicious recipe and enjoy
+                            preparing it at home with simple ingredients
+                            and easy cooking steps.
+                        </p>
+
+                        <!-- Start Cooking -->
+                        <button type="button"
+                                class="btn mt-3"
+                                style="background:#b45f3c; color:white;"
+                                data-bs-dismiss="modal">
+
+                            <i class="fa-solid fa-utensils me-2"></i>
+                            Start Cooking
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="dailydish-footer">
+    <div class="container">
+
+        <div class="row gy-4">
+
+            <!-- Brand -->
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-brand">
+                    <a href="index.html">
+                        <img src="images/a0d3d2cf-4fe7-48db-a4ad-0cd34e5e498a.png"
+                             alt="DailyDish Logo">
+                        <span>DailyDish</span>
+                    </a>
+
+                    <p>
+                        Discover delicious recipes, try new flavors,
+                        and share your favorite dishes with food lovers.
+                    </p>
+
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-2 col-md-6">
+                <h5>Quick Links</h5>
+
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="myrecipes.html">My Recipes</a></li>
+                    <li><a href="share.html">Share Recipe</a></li>
+                </ul>
+            </div>
+
+            <!-- Categories -->
+            <div class="col-lg-3 col-md-6">
+                <h5>Categories</h5>
+
+                <ul class="footer-links">
+                    <li><a href="recipes.html">Breakfast</a></li>
+                    <li><a href="recipes.html">Vegan</a></li>
+                    <li><a href="recipes.html">Non-Vegan</a></li>
+                    <li><a href="recipes.html">Desserts</a></li>
+                    <li><a href="recipes.html">Snacks</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-lg-3 col-md-6">
+                <h5>Get In Touch</h5>
+
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>hello@dailydish.com</span>
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Made with love for food lovers</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="footer-bottom">
+            <p>
+                © 2026 <strong>DailyDish</strong>. All rights reserved.
+            </p>
+
+            <div>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    
+<script src="js/recipes.js">
+
+</script>
+
+
+</body>
+</html>
